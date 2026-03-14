@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animated Login & Register</title>
+    <link rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+
+    <div class="container">
+        <div class="form-box login">
+            <form action="#">
+                <h1>Login</h1>
+                <div class="input-box">
+                    <input type="text" placeholder="Username" required>
+                    <i class='bx bxs-user'></i>
+                </div>
+                <div class="input-box">
+                    <input type="password" placeholder="Password" required>
+                    <i class='bx bxs-lock-alt'></i>
+                </div>
+                <div class="forgot-link">
+                    <a href="#">Forgot password?</a>
+                </div>
+                <button type="submit" class="btn">Login</button>
+                <p>or login with social platforms</p>
+                
+                <div class="social-icons" style="display: flex; justify-content: center; gap: 12px; margin-top: 15px;">
+                    <a href="#" style="display: inline-flex; justify-content: center; align-items: center; width: 42px; height: 42px; background: #fff; border: 1.5px solid #e0e0e0; border-radius: 10px; font-size: 20px; color: #db4437; transition: 0.3s; text-decoration: none;" onmouseover="this.style.background='#db4437'; this.style.color='#fff'; this.style.transform='translateY(-5px)'" onmouseout="this.style.background='#fff'; this.style.color='#db4437'; this.style.transform='translateY(0)'">
+                        <i class='bx bxl-google'></i>
+                    </a>
+                    <a href="#" style="display: inline-flex; justify-content: center; align-items: center; width: 42px; height: 42px; background: #fff; border: 1.5px solid #e0e0e0; border-radius: 10px; font-size: 20px; color: #1877f2; transition: 0.3s; text-decoration: none;" onmouseover="this.style.background='#1877f2'; this.style.color='#fff'; this.style.transform='translateY(-5px)'" onmouseout="this.style.background='#fff'; this.style.color='#1877f2'; this.style.transform='translateY(0)'">
+                        <i class='bx bxl-facebook'></i>
+                    </a>
+                    <a href="#" style="display: inline-flex; justify-content: center; align-items: center; width: 42px; height: 42px; background: #fff; border: 1.5px solid #e0e0e0; border-radius: 10px; font-size: 20px; color: #333; transition: 0.3s; text-decoration: none;" onmouseover="this.style.background='#333'; this.style.color='#fff'; this.style.transform='translateY(-5px)'" onmouseout="this.style.background='#fff'; this.style.color='#333'; this.style.transform='translateY(0)'">
+                        <i class='bx bxl-github'></i>
+                    </a>
+                    <a href="#" style="display: inline-flex; justify-content: center; align-items: center; width: 42px; height: 42px; background: #fff; border: 1.5px solid #e0e0e0; border-radius: 10px; font-size: 20px; color: #0077b5; transition: 0.3s; text-decoration: none;" onmouseover="this.style.background='#0077b5'; this.style.color='#fff'; this.style.transform='translateY(-5px)'" onmouseout="this.style.background='#fff'; this.style.color='#0077b5'; this.style.transform='translateY(0)'">
+                        <i class='bx bxl-linkedin'></i>
+                    </a>
+                </div>
+            </form>
+        </div>
+
+        <div class="form-box register">
+            <form action="#">
+                <h1>Registration</h1>
+                <div class="input-box">
+                    <input type="text" placeholder="Username" required>
+                    <i class='bx bxs-user'></i>
+                </div>
+                <div class="input-box">
+                    <input type="email" placeholder="Email" required>
+                    <i class='bx bxs-envelope'></i>
+                </div>
+                <div class="input-box">
+                    <input type="password" placeholder="Password" required>
+                    <i class='bx bxs-lock-alt'></i>
+                </div>
+                <button type="submit" class="btn">Register</button>
+                <p>or register with social platforms</p>
+                
+                <div class="social-icons" style="display: flex; justify-content: center; gap: 12px; margin-top: 15px;">
+                    <a href="#" style="display: inline-flex; justify-content: center; align-items: center; width: 42px; height: 42px; background: #fff; border: 1.5px solid #e0e0e0; border-radius: 10px; font-size: 20px; color: #db4437; transition: 0.3s; text-decoration: none;" onmouseover="this.style.background='#db4437'; this.style.color='#fff'; this.style.transform='translateY(-5px)'" onmouseout="this.style.background='#fff'; this.style.color='#db4437'; this.style.transform='translateY(0)'">
+                        <i class='bx bxl-google'></i>
+                    </a>
+                    <a href="#" style="display: inline-flex; justify-content: center; align-items: center; width: 42px; height: 42px; background: #fff; border: 1.5px solid #e0e0e0; border-radius: 10px; font-size: 20px; color: #1877f2; transition: 0.3s; text-decoration: none;" onmouseover="this.style.background='#1877f2'; this.style.color='#fff'; this.style.transform='translateY(-5px)'" onmouseout="this.style.background='#fff'; this.style.color='#1877f2'; this.style.transform='translateY(0)'">
+                        <i class='bx bxl-facebook'></i>
+                    </a>
+                    <a href="#" style="display: inline-flex; justify-content: center; align-items: center; width: 42px; height: 42px; background: #fff; border: 1.5px solid #e0e0e0; border-radius: 10px; font-size: 20px; color: #333; transition: 0.3s; text-decoration: none;" onmouseover="this.style.background='#333'; this.style.color='#fff'; this.style.transform='translateY(-5px)'" onmouseout="this.style.background='#fff'; this.style.color='#333'; this.style.transform='translateY(0)'">
+                        <i class='bx bxl-github'></i>
+                    </a>
+                    <a href="#" style="display: inline-flex; justify-content: center; align-items: center; width: 42px; height: 42px; background: #fff; border: 1.5px solid #e0e0e0; border-radius: 10px; font-size: 20px; color: #0077b5; transition: 0.3s; text-decoration: none;" onmouseover="this.style.background='#0077b5'; this.style.color='#fff'; this.style.transform='translateY(-5px)'" onmouseout="this.style.background='#fff'; this.style.color='#0077b5'; this.style.transform='translateY(0)'">
+                        <i class='bx bxl-linkedin'></i>
+                    </a>
+                </div>
+            </form>
+        </div>
+
+        <div class="toggle-box">
+            <div class="toggle-panel toggle-left">
+                <h1>Hello, Welcome!</h1>
+                <p>Don't have an account?</p>
+                <button class="btn register-btn">Register</button>
+            </div>
+            <div class="toggle-panel toggle-right">
+                <h1>Welcome Back!</h1>
+                <p>Already have an account?</p>
+                <button class="btn login-btn">Login</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
