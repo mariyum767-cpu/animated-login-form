@@ -1,0 +1,205 @@
+/* Google Fonts Import */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #e4e9f7;
+    overflow-x: hidden;
+}
+
+.container {
+    position: relative;
+    width: 850px;
+    height: 550px;
+    background: #fff;
+    border-radius: 30px;
+    box-shadow: 0 0 30px rgba(0, 0, 0, .2);
+    overflow: hidden;
+}
+
+/* --- Form Box Styling --- */
+.form-box {
+    position: absolute;
+    right: 0;
+    width: 50%;
+    height: 100%;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    color: #333;
+    text-align: center;
+    padding: 40px;
+    z-index: 1;
+    transition: .6s ease-in-out;
+}
+
+.container.active .login {
+    transform: translateX(100%);
+    opacity: 0;
+}
+
+.container.active .register {
+    transform: translateX(-100%);
+    opacity: 1;
+    z-index: 5; /* Form ko upar rakhne ke liye */
+}
+
+.register {
+    opacity: 0;
+    z-index: 1;
+}
+
+form { width: 100%; }
+
+h1 { font-size: 36px; margin-bottom: 10px; color: #222; }
+
+/* --- Input Fields --- */
+.input-box {
+    position: relative;
+    width: 100%;
+    height: 50px;
+    margin: 20px 0;
+}
+
+.input-box input {
+    width: 100%;
+    height: 100%;
+    background: #f0f2f5;
+    border: 2px solid transparent;
+    outline: none;
+    border-radius: 10px;
+    padding: 0 45px 0 20px;
+    font-size: 16px;
+    color: #000;
+    transition: all 0.3s ease;
+}
+
+.input-box input:focus { border-color: #6c95ff; background: #fff; }
+
+.input-box i {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 20px;
+    color: #888;
+}
+
+/* --- Buttons --- */
+.btn {
+    width: 100%;
+    height: 48px;
+    background: #6c95ff;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    color: #fff;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.btn:hover { background: #4d7aff; }
+
+/* --- Social Icons --- */
+.social-icons { display: flex; justify-content: center; gap: 12px; margin-top: 15px; }
+.social-icons a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 42px;
+    height: 42px;
+    background: #fff;
+    border: 1.5px solid #e0e0e0;
+    border-radius: 10px;
+    font-size: 20px;
+    color: #444;
+    transition: 0.4s ease;
+}
+.social-icons a:hover { color: #fff; transform: translateY(-5px); }
+
+/* --- Toggle Box & Panels (The Fix) --- */
+.toggle-box {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+/* Blue Overlay Background */
+.toggle-box::before {
+    content: '';
+    position: absolute;
+    left: -250%;
+    width: 300%;
+    height: 100%;
+    background: #6c95ff;
+    border-radius: 150px;
+    z-index: 100; /* Isse panels se kam hona chahiye */
+    transition: 1.8s ease-in-out;
+}
+
+.container.active .toggle-box::before { left: 50%; }
+
+.toggle-panel {
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: #fff;
+    z-index: 200; /* Isse blue background (100) se zyada hona chahiye */
+    transition: .6s ease-in-out;
+    padding: 0 30px;
+    text-align: center;
+}
+
+.toggle-left {
+    left: 0;
+    transition-delay: .6s;
+}
+
+.container.active .toggle-left {
+    transform: translateX(-100%);
+    transition-delay: 0s;
+}
+
+.toggle-right {
+    right: -100%; /* Shuru mein screen se bahar */
+    transition-delay: 0s;
+}
+
+.container.active .toggle-right {
+    right: 0; /* Register form par hone par screen ke right side par ayega */
+    transition-delay: .6s;
+}
+
+.toggle-panel h1 { color: #fff; margin-bottom: 10px; }
+.toggle-panel p { color: #fff; margin-bottom: 20px; font-size: 14px; }
+
+.toggle-panel .btn {
+    background: transparent;
+    border: 2px solid #fff;
+    width: 130px;
+}
+
+.toggle-panel .btn:hover { background: #fff; color: #6c95ff; }
+
+/* --- Mobile Responsiveness --- */
+@media screen and (max-width: 768px) {
+    .container { width: 95%; height: 700px; }
+    .form-box { width: 100%; height: 70%; bottom: 0; }
+    .toggle-box::before { display: none; } /* Mobile par complex animation band */
+    .toggle-panel { width: 100%; height: 30%; position: relative; }
+}
