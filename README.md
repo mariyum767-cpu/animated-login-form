@@ -40,5 +40,4 @@ This project is open source and free to use.
 ## 👩‍💻 Author
 
 Developed by **Mariyam**
-## 🌐 Live Demo  
-[Click here to view the project](https://mariyum767-cpu.github.io/animated-login-form/)
+
